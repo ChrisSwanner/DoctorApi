@@ -1,8 +1,9 @@
 import $ from 'jquery';
 import { doctorAjaxCall, doctorLookUp } from './../src/doctor.js';
 
+import './styles.css';
+
 var doctorDisplay = function(response) {
-  console.log(response)
   if (response.data.length > 0) {
    for (let i = 0; i < 10; i++) {
      if (response.data[i].practices[i].accepts_new_patients === true) {
